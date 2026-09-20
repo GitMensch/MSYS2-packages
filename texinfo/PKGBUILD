@@ -100,7 +100,8 @@ package_info() {
 }
 
 package_texinfo-tex() {
-  depends=('gawk' 'perl' 'sh')
+  # also depends on texlive-bin - but that's only available in ucrt+clang64
+  depends=('gawk' 'perl' 'sh' 'texinfo')
 
   mkdir -p ${pkgdir}/usr/{bin,share}
   mkdir -p ${pkgdir}/usr/share/man/man1
